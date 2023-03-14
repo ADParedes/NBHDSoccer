@@ -23,7 +23,7 @@ email: nbhdsoccer@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Chicago Neighborhood Soccer (Nbhd socccer) is a home grown, grassroots organization founded and driven by local pickup soccer players.
   We celebrate Chicago's pickup soccer players, and we give back to our local communities.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "/nbhdsoccer" # the subpath of your site, e.g. /blog
 url: "https://adparedes.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: NbhdSoccer
 github_username:  OpenFutbol
