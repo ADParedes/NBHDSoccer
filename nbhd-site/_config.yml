@@ -30,7 +30,7 @@ twitter_username: NbhdSoccer
 github_username:  ADParedes
 
 # Build settings
-theme: minima
+theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
 
