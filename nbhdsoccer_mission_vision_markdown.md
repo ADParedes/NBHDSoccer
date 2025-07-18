@@ -105,5 +105,3 @@ Collaborations with Chicago Red Stars and Boys & Girls Club
 🌐 **Website:** Coming soon in 2025  
 
 ---
-
-*Love your neighbor and give back to your neighborhood when you play pickup soccer*

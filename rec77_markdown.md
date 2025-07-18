@@ -1,4 +1,7 @@
 # REC 77: CO-DEVELOPMENT PARTNERSHIP
+
+![Chicago Neighborhood Soccer Initiative Logo](NBHD MAIN_2025-07.png)
+
 ## Sports Programming Built With You, Not For You
 
 *A Chicago Neighborhood Soccer Initiative*
@@ -76,10 +79,7 @@ Instead of selling you a pre-packaged program, we **co-develop** something that 
 - See if we're a good fit for each other
 - Talk real numbers that work for your school
 
-**Andre Daniel Paredes, Co-Founder**  
+
 📧 nbhdsoccer@gmail.com  
-📱 619-829-6127
 
----
-
-*Born and raised here. Building something that lasts.*
+--- 
