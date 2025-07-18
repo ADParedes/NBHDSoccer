@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REC 77 - Co-Development Partnership</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #4A90E2 0%, #DC143C 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #DC143C 0%, #4A90E2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 50%;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .org-name {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 5px;
+            font-weight: 300;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #DC143C;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #4A90E2;
+            display: inline-block;
+        }
+        
+        .section h3 {
+            color: #DC143C;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        .highlight {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4A90E2;
+            margin: 20px 0;
+        }
+        
+        .highlight strong {
+            color: #DC143C;
+        }
+        
+        .checkmarks {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .checkmarks li {
+            margin: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.05em;
+        }
+        
+        .checkmarks li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4A90E2;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .program-details {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .program-details h3 {
+            color: #DC143C;
+            margin-top: 0;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #DC143C 0%, #4A90E2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: #666;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+        
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, #4A90E2, #DC143C);
+            margin: 30px 0;
+            border-radius: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 8px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg width="64" height="64" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Chicago star with soccer ball -->
+                    <g transform="translate(100,100)">
+                        <!-- Outer blue star outline -->
+                        <path d="M0,-70 L20,-20 L70,-20 L30,10 L50,60 L0,30 L-50,60 L-30,10 L-70,-20 L-20,-20 Z" 
+                              fill="none" stroke="#4A90E2" stroke-width="6"/>
+                        <!-- Inner red star -->
+                        <path d="M0,-50 L15,-15 L50,-15 L22,7 L37,42 L0,22 L-37,42 L-22,7 L-50,-15 L-15,-15 Z" 
+                              fill="#DC143C"/>
+                        <!-- Soccer ball circle -->
+                        <circle cx="0" cy="0" r="18" fill="white" stroke="#4A90E2" stroke-width="2"/>
+                        <!-- Soccer ball pattern -->
+                        <g stroke="#DC143C" stroke-width="1.5" fill="none">
+                            <polygon points="0,-12 -6,-6 -6,6 6,6 6,-6"/>
+                            <line x1="-6" y1="-6" x2="-12" y2="-3"/>
+                            <line x1="-6" y1="6" x2="-12" y2="9"/>
+                            <line x1="6" y1="6" x2="12" y2="9"/>
+                            <line x1="6" y1="-6" x2="12" y2="-3"/>
+                            <line x1="0" y1="-12" x2="0" y2="-15"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="org-name">Chicago Neighborhood Soccer</div>
+            <h1>REC 77: CO-DEVELOPMENT PARTNERSHIP</h1>
+            <div class="subtitle">Sports Programming Built With You, Not For You</div>
+        </div>
+        
+        <div class="content">
+            <div class="divider"></div>
+            
+            <div class="section">
+                <h2>WHO WE ARE</h2>
+                <p>We're Chicago Neighborhood Soccer - a nonprofit run by locals who've been organizing games in South and West Side neighborhoods for 10+ years. We grew up here, still live here, and have built a 6,500+ member community through trust and consistency.</p>
+                
+                <p><strong>REC 77</strong> represents our commitment to all 77 neighborhoods in Chicago - starting with the ones we call home.</p>
+                
+                <div class="highlight">
+                    <strong>Simple truth:</strong> We're not outsiders parachuting in - we're neighbors who know how to make sports work in our communities.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>THE REC 77 APPROACH</h2>
+                <p>Instead of selling you a pre-packaged program, we <strong>co-develop</strong> something that actually fits your school:</p>
+                
+                <h3>Your Input:</h3>
+                <ul class="checkmarks">
+                    <li>What sports work in your space?</li>
+                    <li>What does your schedule look like?</li>
+                    <li>What do your kids actually want to play?</li>
+                    <li>What's your real budget situation?</li>
+                </ul>
+                
+                <h3>Our Experience:</h3>
+                <ul class="checkmarks">
+                    <li>10+ years organizing successful sports programs</li>
+                    <li>Equipment, coaching, and referee management</li>
+                    <li>Fair team balancing (no blowouts, everyone competes)</li>
+                    <li>Event management that actually shows up</li>
+                </ul>
+                
+                <div class="highlight">
+                    <strong>Together:</strong> We build something that works for your students and your reality.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>WHAT PRINCIPALS TELL US THEY NEED</h2>
+                <ul class="checkmarks">
+                    <li>Programs that actually engage kids (not just check boxes)</li>
+                    <li>Vendors who understand budget constraints</li>
+                    <li>People who show up and do what they say</li>
+                    <li>Activities that build school community</li>
+                    <li>Partners, not just service providers</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>WHY US? THE HONEST VERSION</h2>
+                <ul class="checkmarks">
+                    <li><strong>We're Local</strong> - These are the neighborhoods we grew up in</li>
+                    <li><strong>We're Proven</strong> - 6,500+ people play with us because we deliver</li>
+                    <li><strong>We're Flexible</strong> - Every school is different; we adapt</li>
+                    <li><strong>We're Realistic</strong> - We know budgets are tight</li>
+                    <li><strong>We're Reliable</strong> - 10+ years of showing up consistently</li>
+                </ul>
+                
+                <div class="highlight">
+                    <strong>The Reality:</strong> We're new to CPS as an official vendor, but we're not new to organizing sports or working with kids in these communities.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>PROGRAM BASICS</h2>
+                <div class="program-details">
+                    <h3>Program Details</h3>
+                    <p><strong>Duration:</strong> 4-8 weeks (your choice)</p>
+                    <p><strong>Sports:</strong> Soccer, basketball, floor hockey, volleyball - whatever fits your space</p>
+                    <p><strong>What We Provide:</strong> Coaches, refs, equipment, team balancing, championship event</p>
+                    <p><strong>What You Get:</strong> Kids engaged, community built, logistics handled</p>
+                    <p><strong>Pricing:</strong> Starting at $4,500 for 4-week program | $9,500 for full 8-week experience</p>
+                    
+                    <div class="highlight">
+                        <em>We work with your budget - period.</em>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h2>NEXT STEP</h2>
+                <p><strong>15-minute conversation.</strong> No pitch, no pressure. Just a chance to:</p>
+                <ul class="checkmarks">
+                    <li>Hear what your students actually need</li>
+                    <li>See if we're a good fit for each other</li>
+                    <li>Talk real numbers that work for your school</li>
+                </ul>
+                
+                <div class="contact-info">
+                    <p><strong>Andre Daniel Paredes, Co-Founder</strong></p>
+                    <p>📧 nbhdsoccer@gmail.com</p>
+                    <p>📱 619-829-6127</p>
+                </div>
+            </div>
+            
+            <div class="tagline">
+                Born and raised here. Building something that lasts.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
