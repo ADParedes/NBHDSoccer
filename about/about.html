@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mission & Vision | Chicago Neighborhood Soccer</title>
+    <meta name="description" content="Learn about Chicago Neighborhood Soccer's mission, vision, and 10+ years of building community through soccer across Chicago's South & West sides.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header - Consistent with homepage */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .cta-button {
+            background: #e74c3c;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .page-header .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.gray {
+            background: #f8f9fa;
+        }
+        
+        .section h2 {
+            color: #e74c3c;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .section h3 {
+            color: #e74c3c;
+            font-size: 1.6rem;
+            margin: 30px 0 20px 0;
+        }
+        
+        .section p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .mission-box, .vision-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            border-left: 5px solid #2a5298;
+            margin: 30px 0;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .vision-box {
+            border-left-color: #e74c3c;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .value-card h4 {
+            color: #e74c3c;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .value-card p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #2a5298 0%, #e74c3c 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .highlight {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #2a5298;
+            margin: 30px 0;
+            font-size: 1.1rem;
+        }
+        
+        .highlight strong {
+            color: #e74c3c;
+        }
+        
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .leader-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .leader-card h4 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .content-section {
+                padding: 50px 0;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">NBHD Soccer</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#programs">Programs</a></li>
+                <li><a href="../index.html#events">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <a href="https://www.meetup.com/nbhdsoccer/events/" class="cta-button">Join Us Today</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>About Chicago Neighborhood Soccer</h1>
+            <p class="subtitle">From Pickup to Purpose — Stronger Together</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section">
+                <h2>WHO WE ARE</h2>
+                <p>Chicago Neighborhood Soccer (CNS) is a grassroots nonprofit organization founded by experienced community leaders who have been organizing pickup games and leagues across Chicago's South and West Side neighborhoods for over a decade. While officially established as an Illinois nonprofit in 2022, our leadership team brings 10+ years of soccer community-building experience to this venture.</p>
+                
+                <p>What began as passionate individuals creating informal weekly games has evolved into a vibrant community of over 6,500 members, all through word-of-mouth and the reputation we've built for quality experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section gray">
+        <div class="container">
+            <div class="section">
+                <h2>OUR MISSION</h2>
+                <div class="mission-box">
+                    To cultivate inclusive communities through elevated and welcoming soccer experiences - one person and one event at a time.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section">
+                <h2>OUR VISION</h2>
+                <div class="vision-box">
+                    To build meaningful connections that give our communities a sense of belonging while using soccer as a catalyst for positive neighborhood change.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section gray">
+        <div class="container">
+            <div class="section">
+                <h2>OUR CORE VALUES</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h4>Neighborhood Enrichment</h4>
+                        <p>Elevating local communities through active engagement and creating positive spaces where neighbors connect.</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>Integrity</h4>
+                        <p>Reflecting strong values in how soccer is organized and played, building trust through consistent action.</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>Inspiration</h4>
+                        <p>Encouraging others to take part and make a difference in their communities, one game at a time.</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>Progress</h4>
+                        <p>Reflecting continuous improvement in soccer experiences and measurable community impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section">
+                <h2>OUR IMPACT & TRACK RECORD</h2>
+                
+                <div class="impact-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years Organizing</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">6,500+</span>
+                        <span class="stat-label">Community Members</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">400</span>
+                        <span class="stat-label">Weekly Participants</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Events (Past 12 Months)</span>
+                    </div>
+                </div>
+                
+                <h3>What We've Built</h3>
+                <p><strong>Decade-Long Presence:</strong> 10+ years organizing some of Chicago's most respected pickup games and community leagues</p>
+                
+                <p><strong>Cross-Cultural Connection:</strong> Weekly games that bring together players from diverse backgrounds, ages, and skill levels</p>
+                
+                <p><strong>Charitable Focus:</strong> Events that redirect 100% of fundraised proceeds to local causes</p>
+                
+                <p><strong>Trusted Leadership:</strong> Known throughout Chicago's soccer community for consistently delivering quality experiences</p>
+                
+                <p><strong>Neighborhood Anchors:</strong> Creating safe, positive social environments that have become weekly traditions in our communities</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section gray">
+        <div class="container">
+            <div class="section">
+                <h2>ORGANIZATIONAL STRUCTURE</h2>
+                <div class="leadership-grid">
+                    <div class="leader-card">
+                        <h4>Legal Status</h4>
+                        <p>Illinois Not-For-Profit Corporation with EIN (501(c)(3) status pending)</p>
+                    </div>
+                    <div class="leader-card">
+                        <h4>Board of Directors</h4>
+                        <p>Diego Moreno, Julian Da Silva, Jordan Da Silva, Andre D Paredes</p>
+                    </div>
+                    <div class="leader-card">
+                        <h4>Leadership Team</h4>
+                        <p>Alex Alvizo, Marcos Beltran, Michael Wang, plus 5+ dedicated community leaders</p>
+                    </div>
+                    <div class="leader-card">
+                        <h4>Operations</h4>
+                        <p>Volunteer-powered - All operations run by passionate community members who donate their time</p>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>Contact:</strong> nbhdsoccer@gmail.com | Follow us on Instagram | RSVP to play on Meetup
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
