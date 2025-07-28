@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chicago Neighborhood Soccer | Pickup Soccer, Youth Programs & Community Building</title>
-    <meta name="description" content="Join Chicago's premier neighborhood soccer community. Weekly pickup games, women's soccer, youth tournaments, school programs & community events across Chicago's South & West sides.">
-    <meta name="keywords" content="Chicago pickup soccer, neighborhood soccer, women's soccer Chicago, youth soccer programs, South Side soccer, West Side soccer, Chicago soccer community">
+    <title>REC 77 - School Partnership Program | Chicago Neighborhood Soccer</title>
+    <meta name="description" content="REC 77 brings customized sports leagues directly to CPS schools. Co-development partnerships that work for your students and your budget.">
     
     <style>
         * {
@@ -26,9 +25,9 @@
             padding: 0 20px;
         }
         
-        /* Header */
+        /* Header - Consistent with homepage */
         header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg,  #53b7ff 100%);
             color: white;
             padding: 1rem 0;
             position: sticky;
@@ -94,7 +93,19 @@
             border-radius: 5px;
         }
         
-        .
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            opacity: 1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown > a::after {
+            content: " ▼";
+            font-size: 0.8em;
+        }
         
         .cta-button {
             background: #e74c3c;
@@ -110,275 +121,199 @@
             transform: translateY(-2px);
         }
         
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(76, 175, 80, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23388e3c" width="1200" height="600"/><circle fill="%23ffffff" cx="600" cy="300" r="100" opacity="0.1"/></svg>');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-        
-        .btn-primary, .btn-secondary {
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
-        
-        .btn-primary {
-            background: #e74c3c;
-            color: white;
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-primary:hover, .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        /* Quick Actions */
-        .quick-actions {
-            background: #f8f9fa;
-            padding: 80px 0;
-        }
-        
-        .quick-actions h2 {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            color: #2c3e50;
-        }
-        
-        .actions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        .action-card {
+        /* Page Header */
+        .page-header {
+            /* background: linear-gradient(135deg, #e74d3c9d 0%, #03ddff89 100%); */
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .action-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .action-icon {
-            width: 60px;
-            height: 60px;
-            background: #e74c3c;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-        }
-        
-        /* Programs Section */
-        .programs {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .programs h2 {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            color: #2c3e50;
-        }
-        
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .program-card {
-            border: 1px solid #e9ecef;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        
-        .program-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .program-header {
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .program-body {
-            padding: 1.5rem;
-        }
-        
-        /* Upcoming Events */
-        .events {
-            background: #f8f9fa;
-            padding: 80px 0;
-        }
-        
-        .events h2 {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            color: #2c3e50;
-        }
-        
-        .events-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .event-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 5px solid #e74c3c;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .event-date {
-            color: #e74c3c;
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-        }
-        
-        /* Community Impact */
-        .impact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
+            color: rgb(12, 12, 12);
+            padding: 60px 0;
             text-align: center;
         }
         
-        .impact-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .stat {
-            text-align: center;
-        }
-        
-        .stat-number {
+        .page-header h1 {
             font-size: 3rem;
-            font-weight: bold;
-            display: block;
-        }
-        
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-section h4 {
             margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .page-header .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 1rem;
+        }
+        
+        .page-header .initiative {
+            font-style: italic;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+        
+        /* Logo in header */
+        .header-logo {
+            max-width: 200px;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 60px 0;
+        }
+        
+        .content-section.gray {
+            background: #f8f9fa;
+        }
+        
+        .section h2 {
+            color: #e74c3c;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2a5298;
+            display: inline-block;
+        }
+        
+        .section h3 {
+            color: #e74c3c;
+            font-size: 1.4rem;
+            margin: 25px 0 15px 0;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .highlight {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #2a5298;
+            margin: 25px 0;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        
+        .highlight strong {
             color: #e74c3c;
         }
         
-        .footer-section a {
-            color: #bdc3c7;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
+        .checkmarks {
+            list-style: none;
+            margin: 20px 0;
         }
         
-        .footer-section a:hover {
+        .checkmarks li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        .checkmarks li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+        
+        .program-details {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 25px 0;
+        }
+        
+        .program-details h3 {
+            color: #e74c3c;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .program-details ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .program-details ul li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .program-details ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+            font-weight: bold;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
+            padding: 60px 0;
+            text-align: center;
         }
         
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .contact-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        .contact-info {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+        
+        .contact-info strong {
+            color: #e74c3c;
+        }
+        
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, #2a5298, #e74c3c);
+            margin: 40px 0;
+            border-radius: 2px;
         }
         
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
+            .page-header h1 {
+                font-size: 2.2rem;
             }
             
             .nav-links {
                 display: none;
             }
             
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
-            .btn-primary, .btn-secondary {
-                width: 250px;
-                text-align: center;
+            .content-section {
+                padding: 40px 0;
+            }
+            
+            .dropdown-content {
+                position: relative;
+                display: block;
+                box-shadow: none;
+                background: none;
             }
         }
     </style>
@@ -386,221 +321,171 @@
 <body>
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">NBHD Soccer</a>
+            <a href="../index.html" class="logo">NBHD Soccer</a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="programs/rec_77.html">REC 77</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="../about/about.html">About</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="../index.html#programs">Programs</a>
+                    <div class="dropdown-content">
+                        <a href="rec_77.html">REC 77 - School Programs</a>
+                        <a href="../index.html#programs">Youth Development</a>
+                        <a href="../index.html#programs">Women's Soccer</a>
+                        <a href="../index.html#programs">Community Building</a>
+                    </div>
+                </li>
+                <li><a href="../index.html#events">Events</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
             </ul>
-            <a href="https://www.meetup.com/nbhdsoccer/events/" class="cta-button">Join Us Today</a>
+            <a href="https://www.meetup.com/nbhdsoccer/events/" class="cta-button">
+                <img src="../assets/nbhd_simple_logo_2025-07.png" alt="NBHD Logo" style="height: 20px; margin-right: 8px; vertical-align: middle;">
+                Join Us Today
+            </a></a>
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="page-header">
         <div class="container">
-            <h1>Chicago Neighborhood Soccer</h1>
-            <p>Building community through soccer across Chicago's South & West sides. From pickup games to youth programs, we're neighbors strengthening neighborhoods.</p>
-            <div class="hero-buttons">
-                <a href="https://www.meetup.com/nbhdsoccer/events/" class="btn-primary">Find Your Game</a>
-                <a href="#programs" class="btn-secondary">Explore Programs</a>
-            </div>
+            <h1>REC 77: CO-DEVELOPMENT PARTNERSHIP</h1>
+            <img src="../assets/nbhd_simple_logo_2025-07.png" alt="Chicago Neighborhood Soccer Initiative Logo" class="header-logo">
+            <p class="subtitle">Sports Programming Built With You, Not For You</p>
+            <p class="initiative">A Chicago Neighborhood Soccer Initiative</p>
         </div>
     </section>
 
-    <section class="quick-actions">
+    <div class="divider"></div>
+
+    <section class="content-section">
         <div class="container">
-            <h2>Get Started</h2>
-            <div class="actions-grid">
-                <div class="action-card">
-                    <div class="action-icon">⚽</div>
-                    <h3>Weekly Pickup Games</h3>
-                    <p>Join us Tuesdays, Thursdays, Fridays, and select Saturdays. All skill levels welcome!</p>
-                    <a href="https://www.meetup.com/nbhdsoccer/events/" class="btn-primary" style="margin-top: 1rem; display: inline-block;">RSVP Now</a>
-                </div>
-                <div class="action-card">
-                    <div class="action-icon">👩</div>
-                    <h3>Women's Only Soccer</h3>
-                    <p>Every Wednesday evening. Safe, supportive space for women to play and connect.</p>
-                    <a href="https://www.meetup.com/nbhdsoccer/events/" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Join Women's Group</a>
-                </div>
-                <div class="action-card">
-                    <div class="action-icon">🏫</div>
-                    <h3>School Programs</h3>
-                    <p>REC 77 brings sports leagues directly to CPS schools. Building community one school at a time.</p>
-                    <a href="programs/rec_77.html" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Learn About REC 77</a>
-                </div>
-                <div class="action-card">
-                    <div class="action-icon">🏆</div>
-                    <h3>Tournaments & Events</h3>
-                    <p>Annual David Benavidez Memorial Tournament, Women's Tournament, and youth competitions.</p>
-                    <a href="#events" class="btn-primary" style="margin-top: 1rem; display: inline-block;">See Events</a>
+            <div class="section">
+                <h2>WHO WE ARE</h2>
+                <p>We're Chicago Neighborhood Soccer - a nonprofit run by locals who've been organizing games in South and West Side neighborhoods for 10+ years. We grew up here, still live here, and have built a 6,500+ member community through trust and consistency.</p>
+                
+                <p><strong>REC 77</strong> represents our commitment to all 77 neighborhoods in Chicago - starting with the ones we call home.</p>
+                
+                <div class="highlight">
+                    <strong>Simple truth:</strong> We're not outsiders parachuting in - we're neighbors who know how to make sports work in our communities.
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="programs" id="programs">
+    <div class="divider"></div>
+
+    <section class="content-section gray">
         <div class="container">
-            <h2>Our Programs</h2>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-header">
-                        <h3>Community Pickup Soccer</h3>
+            <div class="section">
+                <h2>THE REC 77 APPROACH</h2>
+                <p>Instead of selling you a pre-packaged program, we <strong>co-develop</strong> something that actually fits your school:</p>
+                
+                <div class="two-column">
+                    <div>
+                        <h3>Your Input:</h3>
+                        <ul class="checkmarks">
+                            <li>What sports work in your space?</li>
+                            <li>What does your schedule look like?</li>
+                            <li>What do your kids actually want to play?</li>
+                            <li>What's your real budget situation?</li>
+                        </ul>
                     </div>
-                    <div class="program-body">
-                        <p>Weekly games across Chicago's neighborhoods. We make pickup soccer findable, accessible, and welcoming for everyone.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1rem;">
-                            <li>Tuesdays & Thursdays: Mixed pickup</li>
-                            <li>Wednesdays: Women's only</li>
-                            <li>Fridays: Community games</li>
-                            <li>Saturdays: Beach soccer (seasonal)</li>
+                    
+                    <div>
+                        <h3>Our Experience:</h3>
+                        <ul class="checkmarks">
+                            <li>10+ years organizing successful sports programs</li>
+                            <li>Equipment, coaching, and referee management</li>
+                            <li>Fair team balancing (no blowouts, everyone competes)</li>
+                            <li>Event management that actually shows up</li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="program-card">
-                    <div class="program-header">
-                        <h3>REC 77: School Partnerships</h3>
-                    </div>
-                    <div class="program-body">
-                        <p>In-house sports leagues co-developed with CPS schools. We bring professional coaching and equipment directly to students.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1rem;">
-                            <li>4-8 week customizable programs</li>
-                            <li>Multiple sports options</li>
-                            <li>Professional coaches & referees</li>
-                            <li>Championship celebrations</li>
-                        </ul>
-                        <a href="programs/rec_77.html" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Learn More</a>
-                    </div>
+                <div class="highlight">
+                    <strong>Together:</strong> We build something that works for your students and your reality.
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section">
+                <h2>WHAT PRINCIPALS TELL US THEY NEED</h2>
+                <ul class="checkmarks">
+                    <li>Programs that actually engage kids (not just check boxes)</li>
+                    <li>Vendors who understand budget constraints</li>
+                    <li>People who show up and do what they say</li>
+                    <li>Activities that build school community</li>
+                    <li>Partners, not just service providers</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="content-section gray">
+        <div class="container">
+            <div class="section">
+                <h2>WHY US? THE HONEST VERSION</h2>
+                <ul class="checkmarks">
+                    <li><strong>We're Local</strong> - These are the neighborhoods we grew up in</li>
+                    <li><strong>We're Proven</strong> - 6,500+ people play with us because we deliver</li>
+                    <li><strong>We're Flexible</strong> - Every school is different; we adapt</li>
+                    <li><strong>We're Realistic</strong> - We know budgets are tight</li>
+                    <li><strong>We're Reliable</strong> - 10+ years of showing up consistently</li>
+                </ul>
                 
-                <div class="program-card">
-                    <div class="program-header">
-                        <h3>Youth Development</h3>
-                    </div>
-                    <div class="program-body">
-                        <p>Partnering with YMCA, Chicago Park District, and Boys & Girls Club for youth tournaments and development programs.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1rem;">
-                            <li>3-6 grade tournaments</li>
-                            <li>7-8 grade competitions</li>
-                            <li>Alumni support programs</li>
-                            <li>Coed opportunities</li>
-                        </ul>
-                    </div>
+                <div class="highlight">
+                    <strong>The Reality:</strong> We're new to CPS as an official vendor, but we're not new to organizing sports or working with kids in these communities.
                 </div>
-                
-                <div class="program-card">
-                    <div class="program-header">
-                        <h3>Community Building</h3>
-                    </div>
-                    <div class="program-body">
-                        <p>Beyond soccer, we support local artists, fundraise for community causes, and strengthen neighborhood connections.</p>
-                        <ul style="margin: 1rem 0; padding-left: 1rem;">
-                            <li>Art Gala with $1000 artist grants</li>
-                            <li>Memorial tournaments</li>
-                            <li>Charity fundraising</li>
-                            <li>Neighborhood celebrations</li>
-                        </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section">
+                <h2>PROGRAM BASICS</h2>
+                <div class="program-details">
+                    <ul>
+                        <li><strong>Duration:</strong> 4-8 weeks (your choice)</li>
+                        <li><strong>Sports:</strong> Soccer, basketball, floor hockey, volleyball - whatever fits your space</li>
+                        <li><strong>What We Provide:</strong> Coaches, refs, equipment, team balancing, championship event</li>
+                        <li><strong>What You Get:</strong> Kids engaged, community built, logistics handled</li>
+                        <li><strong>Pricing:</strong> Starting at $4,500 for 4-week program | $9,500 for full 8-week experience</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <em>We work with your budget - period.</em>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="events" id="events">
+    <div class="divider"></div>
+
+    <section class="contact-section">
         <div class="container">
-            <h2>Upcoming Events</h2>
-            <div class="events-list">
-                <div class="event-card">
-                    <div class="event-date">August 2025</div>
-                    <h4>Alumni Game with CPS School</h4>
-                    <p>Supporting high school soccer programs through community engagement and fundraising.</p>
-                </div>
-                <div class="event-card">
-                    <div class="event-date">September 2025</div>
-                    <h4>Women's Only Tournament</h4>
-                    <p>Annual tournament celebrating women's soccer in Chicago's neighborhoods.</p>
-                </div>
-                <div class="event-card">
-                    <div class="event-date">October 2025</div>
-                    <h4>6th Annual David Benavidez Memorial Tournament</h4>
-                    <p>Honoring David's legacy while raising funds for community health initiatives.</p>
-                </div>
-                <div class="event-card">
-                    <div class="event-date">Ongoing</div>
-                    <h4>Weekly Pickup Games</h4>
-                    <p>Every Tuesday, Wednesday (women's), Thursday, and Friday. RSVP on Meetup!</p>
+            <h2>NEXT STEP</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;"><strong>15-minute conversation.</strong> No pitch, no pressure. Just a chance to:</p>
+            <ul class="checkmarks" style="text-align: left; max-width: 500px; margin: 0 auto;">
+                <li>Hear what your students actually need</li>
+                <li>See if we're a good fit for each other</li>
+                <li>Talk real numbers that work for your school</li>
+            </ul>
+            
+            <div style="margin-top: 2rem;">
+                <div class="contact-info">
+                    <p>📧 nbhdsoccer@gmail.com</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="impact" id="about">
-        <div class="container">
-            <h2>Our Community Impact</h2>
-            <p>Over 10 years of building stronger neighborhoods through soccer</p>
-            <div class="impact-stats">
-                <div class="stat">
-                    <span class="stat-number">6,500+</span>
-                    <span>Community Members</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">400</span>
-                    <span>Weekly Participants</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">100+</span>
-                    <span>Annual Events</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">10+</span>
-                    <span>Years Building Community</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <a href="https://www.meetup.com/nbhdsoccer/events/">Join Our Meetup</a>
-                    <a href="#programs">Our Programs</a>
-                    <a href="programs/rec_77.html">REC 77 Program</a>
-                    <a href="#events">Upcoming Events</a>
-                    <a href="mailto:nbhdsoccer@gmail.com">Contact Us</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Programs</h4>
-                    <a href="#pickup">Pickup Soccer</a>
-                    <a href="#programs">Women's Soccer</a>
-                    <a href="programs/rec_77.html">REC 77 School Programs</a>
-                    <a href="#programs">Youth Tournaments</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Community</h4>
-                    <a href="#events">David Benavidez Tournament</a>
-                    <a href="#programs">Art Gala</a>
-                    <a href="#programs">Alumni Support</a>
-                    <a href="#about">Our Story</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <a href="mailto:nbhdsoccer@gmail.com">nbhdsoccer@gmail.com</a>
-                    <a href="tel:###-###-####">Andre Co-Founder: ###-###-####</a>
-                    <a href="tel:###-###-####">Diego Co-Founder: ###-###-####</a>
-                    <a href="tel:###-###-####">Jordan Co-Founder: ###-###-####</a>
-                    <a href="tel:###-###-####">Julian Co-Founder: ###-###-####</a>
-                    <p style="margin-top: 1rem;">Chicago's South & West Sides</p>
-                </div>
-            </div>
-            <hr style="margin: 2rem 0; border: 1px solid #34495e;">
-            <p>&copy; 2025 Chicago Neighborhood Soccer. Building communities one game at a time.</p>
-        </div>
-    </footer>
 </body>
 </html>

@@ -28,7 +28,7 @@
         
         /* Header */
         header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg,  #53b7ff 100%);
             color: white;
             padding: 1rem 0;
             position: sticky;
@@ -112,8 +112,8 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(76, 175, 80, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23388e3c" width="1200" height="600"/><circle fill="%23ffffff" cx="600" cy="300" r="100" opacity="0.1"/></svg>');
+            background: linear-gradient(rgba(175, 76, 76, 0.8),rgba(47, 155, 227, 0.8)), 
+                        url('/assets/nbhd_simple_logo_2025-07.png');
             background-size: cover;
             background-position: center;
             color: white;
@@ -142,6 +142,114 @@
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+         /* Community Gallery Section */
+        .community-gallery {
+            background: #f8f9fa;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .community-gallery h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .community-gallery .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .gallery-slideshow {
+            position: relative;
+            max-width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .gallery-image.active {
+            opacity: 1;
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 30px 20px 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-image.active .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .gallery-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .gallery-dot.active {
+            background: #e74c3c;
         }
         
         .btn-primary, .btn-secondary {
@@ -388,14 +496,24 @@
         <nav class="container">
             <a href="index.html" class="logo">NBHD Soccer</a>
             <ul class="nav-links">
+                <li><a href="about/about.html">About</a></li>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="programs/rec_77.html">REC 77</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="index.html#programs">Programs</a>
+                    <div class="dropdown-content">
+                        <a href="rec_77.html">REC 77 - School Programs</a>
+                        <a href="index.html#programs">Youth Development</a>
+                        <a href="index.html#programs">Women's Soccer</a>
+                        <a href="index.html#programs">Community Building</a>
+                    </div>
+                </li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
-            <a href="https://www.meetup.com/nbhdsoccer/events/" class="cta-button">Join Us Today</a>
+            <a href="https://www.meetup.com/nbhdsoccer/events/" class="cta-button">
+                <img src="../assets/nbhd_simple_logo_2025-07.png" alt="NBHD Logo" style="height: 20px; margin-right: 8px; vertical-align: middle;">
+                Join Us Today
+            </a></a>
         </nav>
     </header>
 
@@ -406,6 +524,54 @@
             <div class="hero-buttons">
                 <a href="https://www.meetup.com/nbhdsoccer/events/" class="btn-primary">Find Your Game</a>
                 <a href="#programs" class="btn-secondary">Explore Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="community-gallery">
+        <div class="container">
+            <h2>Our Community in Action</h2>
+            <p class="subtitle">See the faces and moments that make Chicago Neighborhood Soccer special</p>
+            
+            <div class="gallery-slideshow">
+                <div class="gallery-image active" style="background-image: url('../assets/gallery_slideshow/weekly_pickup.jpg');">
+                    <div class="gallery-caption">
+                        <h3>Weekly Pickup Games</h3>
+                        <p>Every Tuesday, Thursday, and Friday - neighbors coming together through soccer</p>
+                    </div>
+                </div>
+                <div class="gallery-image" style="background-image: url('../assets/gallery_slideshow/womens.jpeg');">
+                    <div class="gallery-caption">
+                        <h3>Women's Wednesday</h3>
+                        <p>A safe, supportive space for women to play and connect in our community</p>
+                    </div>
+                </div>
+                <div class="gallery-image" style="background-image: url('../assets/gallery_slideshow/youth.jpeg');">
+                    <div class="gallery-caption">
+                        <h3>Youth Programs</h3>
+                        <p>REC 77 bringing sports directly to CPS schools across Chicago</p>
+                    </div>
+                </div>
+                <div class="gallery-image" style="background-image: url('../assets/gallery_slideshow/tournament.jpg');">
+                    <div class="gallery-caption">
+                        <h3>Tournament Champions</h3>
+                        <p>Annual tournaments that celebrate our community and support local causes</p>
+                    </div>
+                </div>
+                <div class="gallery-image" style="background-image: url('../assets/gallery_slideshow/art.jpg');">
+                    <div class="gallery-caption">
+                        <h3>Community Building</h3>
+                        <p>Beyond soccer - art galas, fundraising, and neighborhood connections</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-dots">
+                <span class="gallery-dot active" data-slide="0"></span>
+                <span class="gallery-dot" data-slide="1"></span>
+                <span class="gallery-dot" data-slide="2"></span>
+                <span class="gallery-dot" data-slide="3"></span>
+                <span class="gallery-dot" data-slide="4"></span>
             </div>
         </div>
     </section>
@@ -602,5 +768,51 @@
             <p>&copy; 2025 Chicago Neighborhood Soccer. Building communities one game at a time.</p>
         </div>
     </footer>
+
+    <script>
+        // Gallery Slideshow Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.gallery-image');
+        const dots = document.querySelectorAll('.gallery-dot');
+        
+        function showSlide(n) {
+            // Remove active class from all slides and dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Add active class to current slide and dot
+            slides[n].classList.add('active');
+            dots[n].classList.add('active');
+            
+            currentSlide = n;
+        }
+        
+        function nextSlide() {
+            const nextIndex = (currentSlide + 1) % slides.length;
+            showSlide(nextIndex);
+        }
+        
+        // Add click event listeners to dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+        // Auto-advance slideshow every 3 seconds
+        setInterval(nextSlide, 3000);
+        
+        // Dropdown menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownContent = document.querySelector('.dropdown-content');
+            
+            dropdown.addEventListener('mouseenter', function() {
+                dropdownContent.style.display = 'block';
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                dropdownContent.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
